@@ -29,3 +29,12 @@ V6: hero refinado com monograma oficial em marca d’água, detalhe dourado no k
 
 
 Header V8: monograma separado à esquerda, wordmark Danielly Oliveira / Beauty centralizado e ações de navegação à direita.
+
+
+## V12
+- Header preserved from V11.
+- Reduced mobile Hero top spacing.
+- Added a direct Instagram link at the top of the Hero using @daniellyoliveirabeauty.
+
+
+V20: refinamento sutil do bloco de áreas de atuação, mantendo a altura e a estrutura da versão anterior.
