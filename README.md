@@ -24,3 +24,8 @@ Primeira versão do site da Danielly Oliveira | Beauty Studio.
 3. Inserir depoimentos reais.
 4. Confirmar informações do curso (conteúdo, duração, investimento e formato).
 5. Refinar textos e identidade visual após validação com a cliente.
+
+V6: hero refinado com monograma oficial em marca d’água, detalhe dourado no kicker e destaque dourado na frase em itálico.
+
+
+Header V8: monograma separado à esquerda, wordmark Danielly Oliveira / Beauty centralizado e ações de navegação à direita.
