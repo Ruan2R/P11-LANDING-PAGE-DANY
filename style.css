@@ -202,6 +202,13 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
 .feature-copy { max-width: 620px; }
 .feature-tags, .feature-mini-grid { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
 .feature-tags span { padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: 9px; text-transform: uppercase; letter-spacing: .1em; }
+.feature-techniques { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; margin-top: 28px; }
+.technique-card { position: relative; min-height: 88px; padding: 16px 14px 13px; border: 1px solid rgba(183,151,99,.26); border-radius: 16px; background: rgba(255,255,255,.26); display: flex; flex-direction: column; justify-content: flex-end; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+.technique-card:hover { transform: translateY(-2px); border-color: rgba(183,151,99,.52); background: rgba(255,255,255,.45); }
+.technique-line { position: absolute; top: 12px; left: 14px; width: 20px; height: 1px; background: var(--gold); opacity: .7; }
+.technique-card strong { font-size: 10px; font-weight: 600; letter-spacing: .05em; color: var(--ink); text-transform: uppercase; }
+.technique-card small { margin-top: 4px; color: var(--muted); font-size: 9px; line-height: 1.35; }
+.text-link-icon { width: 17px; height: 17px; fill: currentColor; display: block; flex: 0 0 17px; }
 .feature-mini-grid span { min-width: 120px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 9px; letter-spacing: .08em; color: var(--muted); }
 .feature-mini-grid b { color: var(--ink); font-size: 13px; font-weight: 600; }
 .text-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; padding-bottom: 7px; border-bottom: 1px solid currentColor; font-size: 10px; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; }
@@ -360,6 +367,10 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
   .service-content h3::before { width: 22px; margin-bottom: 14px; }
   .service-cta-icon { width: 18px; height: 18px; flex-basis: 18px; }
   .feature { padding-left: 18px; padding-right: 18px; }
+  .feature-techniques { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 24px; }
+  .technique-card { min-height: 82px; padding: 15px 12px 12px; }
+  .technique-card strong { font-size: 9px; }
+  .technique-card small { font-size: 8px; }
   .feature-image img, .lips-image img, .location-card { border-radius: 24px; }
   .training { padding: 78px 18px; }
   .training-card { width: 75%; }

@@ -38,3 +38,6 @@ Header V8: monograma separado à esquerda, wordmark Danielly Oliveira / Beauty c
 
 
 V20: refinamento sutil do bloco de áreas de atuação, mantendo a altura e a estrutura da versão anterior.
+
+
+V29: refinada a seção de extensão de cílios com quatro técnicas reais (Volume Brasileiro, Volume Egípcio, Foxy Eyes e Fio a Fio Clássico) e CTA com ícone do WhatsApp.
