@@ -206,8 +206,9 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
 .technique-card { position: relative; min-height: 88px; padding: 16px 14px 13px; border: 1px solid rgba(183,151,99,.26); border-radius: 16px; background: rgba(255,255,255,.26); display: flex; flex-direction: column; justify-content: flex-end; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
 .technique-card:hover { transform: translateY(-2px); border-color: rgba(183,151,99,.52); background: rgba(255,255,255,.45); }
 .technique-line { position: absolute; top: 12px; left: 14px; width: 20px; height: 1px; background: var(--gold); opacity: .7; }
-.technique-card strong { font-size: 10px; font-weight: 600; letter-spacing: .05em; color: var(--ink); text-transform: uppercase; }
-.technique-card small { margin-top: 4px; color: var(--muted); font-size: 9px; line-height: 1.35; }
+.technique-card strong { font-size: 11px; font-weight: 500; letter-spacing: .05em; color: var(--ink); text-transform: uppercase; }
+.technique-card small { margin-top: 4px; color: var(--muted); font-size: 9.5px; line-height: 1.35; }
+.btn-whatsapp-icon { width: 16px; height: 16px; fill: currentColor; display: block; flex: 0 0 16px; }
 .text-link-icon { width: 17px; height: 17px; fill: currentColor; display: block; flex: 0 0 17px; }
 .feature-mini-grid span { min-width: 120px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 9px; letter-spacing: .08em; color: var(--muted); }
 .feature-mini-grid b { color: var(--ink); font-size: 13px; font-weight: 600; }
@@ -369,8 +370,8 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
   .feature { padding-left: 18px; padding-right: 18px; }
   .feature-techniques { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 24px; }
   .technique-card { min-height: 82px; padding: 15px 12px 12px; }
-  .technique-card strong { font-size: 9px; }
-  .technique-card small { font-size: 8px; }
+  .technique-card strong { font-size: 10.5px; font-weight: 500; }
+  .technique-card small { font-size: 9px; }
   .feature-image img, .lips-image img, .location-card { border-radius: 24px; }
   .training { padding: 78px 18px; }
   .training-card { width: 75%; }
