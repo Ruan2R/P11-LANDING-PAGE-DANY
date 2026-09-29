@@ -119,6 +119,8 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
 .trust-strip a:hover { background: rgba(183,151,99,.055); }
 .section { padding: clamp(85px, 10vw, 140px) clamp(22px, 6vw, 90px); }
 .section-label { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+.services .section-label { display: inline-flex; align-items: center; gap: 10px; color: var(--gold); font-size: 9px; letter-spacing: .19em; }
+.services .section-label::before { content: ""; width: 24px; height: 1px; background: var(--gold); opacity: .58; }
 .about-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); gap: clamp(45px, 8vw, 130px); align-items: center; margin-top: 42px; }
 .about-image-wrap { position: relative; max-width: 680px; }
 .about-image-wrap img { aspect-ratio: 1 / 1.14; border-radius: 34px; }
@@ -127,28 +129,70 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
 .about-copy h2, .section-heading h2, .feedback h2, .location h2, .instagram h2, .feature-copy h2, .lips-copy h2, .training-copy h2 { margin-top: 22px; font-size: clamp(48px, 6vw, 82px); line-height: .93; letter-spacing: -.04em; }
 .about-copy p, .feature-copy p, .lips-copy p, .training-copy p, .feedback .muted, .location-copy p { color: var(--muted); font-size: 15px; }
 .about-copy p { max-width: 560px; }
-.about-signature { margin-top: 30px; display: flex; justify-content: center; align-items: center; }
-.about-signature img { width: min(210px, 62%); height: auto; display: block; }
+.about-signature { margin-top: 38px; font-family: var(--serif); font-size: 34px; }
+.about-signature span { display: block; font-family: var(--sans); font-size: 9px; letter-spacing: .18em; color: var(--muted); text-transform: uppercase; margin-top: 3px; }
 
 .section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
 .section-heading > p { max-width: 430px; color: var(--muted); font-size: 14px; }
 .section-heading.compact { align-items: center; }
-.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 52px; }
+.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 38px; }
 .service-card { background: var(--paper); border: 1px solid rgba(33,29,27,.08); border-radius: 26px; overflow: hidden; min-height: 610px; display: flex; flex-direction: column; transition: transform .3s ease, box-shadow .3s ease; }
 .service-card:hover { transform: translateY(-7px); box-shadow: var(--shadow); }
 .service-image { height: 270px; overflow: hidden; }
 .service-image img { height: 100%; transition: transform .5s ease; }
 .service-card:hover .service-image img { transform: scale(1.04); }
 .service-content { display: flex; flex: 1; flex-direction: column; padding: 26px; }
-.service-index { font-size: 9px; font-weight: 700; color: var(--gold); letter-spacing: .19em; }
-.service-content h3 { margin-top: 22px; font-size: 37px; line-height: .91; }
+.service-index { display: none; }
+.service-content h3 { margin-top: 0; font-size: 37px; line-height: .91; }
+.service-content h3::before { content: ""; display: block; width: 24px; height: 1px; margin-bottom: 16px; background: var(--gold); opacity: .65; }
 .service-content p { margin: 18px 0 25px; color: var(--muted); font-size: 13px; }
 .service-content a { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 18px; border-top: 1px solid var(--line); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; }
+.service-cta-icon { width: 18px; height: 18px; flex: 0 0 18px; color: var(--gold); display: block; }
+.service-cta-icon path { fill: currentColor; }
+.service-card-course .service-cta-icon { color: #bfeaf3; }
 .service-card-course { background: var(--blue-deep); color: #fff; }
 .service-card-course .service-content p { color: rgba(255,255,255,.68); }
 .service-card-course .service-index { color: #bfeaf3; }
 .service-card-course .service-content a { border-color: rgba(255,255,255,.22); }
 
+
+/* Lash feature: editorial eyebrow sits above the image */
+.feature-lash {
+  grid-template-rows: auto 1fr;
+}
+.feature-lash .feature-eyebrow-top {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  margin-bottom: 14px;
+}
+.feature-lash .feature-image {
+  grid-column: 1;
+  grid-row: 2;
+}
+.feature-lash .feature-copy {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: center;
+}
+@media (max-width: 820px) {
+  .feature-lash {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .feature-lash .feature-eyebrow-top {
+    order: 0;
+    align-self: flex-start;
+    margin-bottom: 14px;
+  }
+  .feature-lash .feature-image {
+    order: 1;
+  }
+  .feature-lash .feature-copy {
+    order: 2;
+  }
+}
 .feature { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(40px, 7vw, 105px); align-items: center; padding: 0 clamp(22px, 6vw, 90px) clamp(80px, 10vw, 140px); }
 .feature.reverse { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
 .feature.reverse .feature-image { order: 2; }
@@ -226,7 +270,8 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
 .site-footer span { color: rgba(255,255,255,.45); font-size: 8px; text-transform: uppercase; letter-spacing: .2em; }
 .footer-links { display: flex; gap: 24px; font-size: 10px; text-transform: uppercase; letter-spacing: .12em; }
 .site-footer small { justify-self: end; color: rgba(255,255,255,.45); font-size: 9px; }
-.floating-whatsapp { position: fixed; z-index: 60; right: 20px; bottom: 20px; width: 52px; height: 52px; display: grid; place-items: center; border-radius: 50%; background: #16a34a; color: #fff; font-size: 11px; font-weight: 700; box-shadow: 0 12px 30px rgba(0,0,0,.2); }
+.floating-whatsapp { position: fixed; z-index: 60; right: 20px; bottom: 20px; width: 52px; height: 52px; display: grid; place-items: center; border-radius: 50%; background: #16a34a; color: #fff; box-shadow: 0 12px 30px rgba(0,0,0,.2); }
+.floating-whatsapp svg { width: 27px; height: 27px; fill: currentColor; display: block; }
 
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
@@ -307,8 +352,13 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
   .section-heading, .section-heading.compact, .instagram-head { flex-direction: column; align-items: flex-start; }
   .about-image-wrap img { border-radius: 24px; }
   .image-stamp { right: 10px; bottom: 12px; width: 92px; height: 92px; }
+  .services .section-heading h2 { margin-top: 8px; }
+  .services .section-heading > p { margin-top: 10px; }
+  .service-grid { margin-top: 20px; gap: 14px; }
   .service-image { height: 300px; }
   .service-content h3 { font-size: 42px; }
+  .service-content h3::before { width: 22px; margin-bottom: 14px; }
+  .service-cta-icon { width: 18px; height: 18px; flex-basis: 18px; }
   .feature { padding-left: 18px; padding-right: 18px; }
   .feature-image img, .lips-image img, .location-card { border-radius: 24px; }
   .training { padding: 78px 18px; }
@@ -437,38 +487,41 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
 }
 
 
-
-/* V24 — refinamento da seção Quem eu sou */
-@media (max-width: 560px) {
-  .about-copy > .eyebrow {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .16em;
-    gap: 12px;
+/* V28 — correção da composição do bloco de extensão de cílios em telas estreitas */
+@media (max-width: 1024px) {
+  .feature-lash {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0;
+    align-items: start;
   }
 
-  .about-copy > .eyebrow i {
-    width: 34px;
-    height: 1px;
-    background: var(--gold);
-    opacity: .7;
+  .feature-lash .feature-eyebrow-top {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    justify-self: start;
+    margin: 0 0 14px;
   }
 
-  .about-signature {
-    margin-top: 24px;
-    padding: 2px 0 0;
+  .feature-lash .feature-image {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    margin: 0 0 28px;
   }
 
-  .about-signature img {
-    width: 188px;
-    max-width: 68%;
+  .feature-lash .feature-copy {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+    max-width: none;
+    align-self: start;
   }
 
-  .about {
-    padding-bottom: 42px;
-  }
-
-  .services {
-    padding-top: 38px;
+  .feature-lash .feature-image img {
+    width: 100%;
+    display: block;
   }
 }
