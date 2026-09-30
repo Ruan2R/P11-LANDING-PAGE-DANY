@@ -203,18 +203,11 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
 .feature-tags, .feature-mini-grid { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
 .feature-tags span { padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: 9px; text-transform: uppercase; letter-spacing: .1em; }
 .feature-techniques { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; margin-top: 28px; }
-.technique-card { position: relative; min-height: 88px; padding: 16px 14px 13px; border: 1px solid rgba(183,151,99,.26); border-radius: 16px; background: rgba(255,255,255,.26); display: flex; flex-direction: column; justify-content: flex-end; text-align: left; cursor: pointer; appearance: none; color: inherit; font: inherit; transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease; }
+.technique-card { position: relative; min-height: 88px; padding: 16px 14px 13px; border: 1px solid rgba(183,151,99,.26); border-radius: 16px; background: rgba(255,255,255,.26); display: flex; flex-direction: column; justify-content: flex-end; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
 .technique-card:hover { transform: translateY(-2px); border-color: rgba(183,151,99,.52); background: rgba(255,255,255,.45); }
-.technique-card.is-active { border-color: rgba(183,151,99,.62); background: rgba(183,151,99,.10); box-shadow: inset 0 0 0 1px rgba(183,151,99,.12); }
-.technique-card:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .technique-line { position: absolute; top: 12px; left: 14px; width: 20px; height: 1px; background: var(--gold); opacity: .7; }
 .technique-card strong { font-size: 11px; font-weight: 500; letter-spacing: .05em; color: var(--ink); text-transform: uppercase; }
 .technique-card small { margin-top: 4px; color: var(--muted); font-size: 9.5px; line-height: 1.35; }
-.lash-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 20px; }
-.lash-meta div { padding-top: 12px; border-top: 1px solid var(--line); }
-.lash-meta span, .lash-meta strong { display:block; }
-.lash-meta span { color: var(--gold); font-size: 8px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
-.lash-meta strong { margin-top: 6px; color: var(--muted); font-size: 10px; font-weight: 500; line-height: 1.45; }
 .btn-whatsapp-icon { width: 16px; height: 16px; fill: currentColor; display: block; flex: 0 0 16px; }
 .text-link-icon { width: 17px; height: 17px; fill: currentColor; display: block; flex: 0 0 17px; }
 .text-link-icon.instagram-icon { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.6; }
@@ -296,18 +289,14 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
 .final-side { font-family: var(--serif); font-size: 45px; line-height: .75; text-align: right; color: rgba(255,255,255,.18); }
 .final-side span { font-family: var(--sans); font-size: 12px; letter-spacing: .34em; }
 
-.final-cta {
-  box-shadow: 0 -10px 24px rgba(12, 38, 55, .06);
-}
-
 .final-cta::before {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  top: -12px;
-  height: 14px;
-  background: linear-gradient(180deg, rgba(247,241,234,0) 0%, rgba(7,74,112,.10) 100%);
+  top: -30px;
+  height: 36px;
+  background: linear-gradient(180deg, var(--rose-soft) 0%, rgba(219, 185, 176, .72) 34%, var(--blue-deep) 100%);
   border-radius: 42px 42px 0 0;
   pointer-events: none;
 }
@@ -413,7 +402,6 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
   .technique-card { min-height: 82px; padding: 15px 12px 12px; }
   .technique-card strong { font-size: 10.5px; font-weight: 500; }
   .technique-card small { font-size: 9px; }
-  .lash-meta { grid-template-columns: 1fr; gap: 12px; margin-top: 16px; }
   .feature-image img, .lips-image img, .location-card { border-radius: 24px; }
   .training { padding: 78px 18px; }
   .training-card { width: 75%; }
@@ -939,15 +927,6 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
 }
 
 
-
-/* V50 — refinamento de conteúdo da formação */
-.training-art-head .eyebrow { max-width: 340px; }
-.training .note { max-width: 420px; line-height: 1.55; }
-@media (max-width: 820px) {
-  .training-art-head .eyebrow { max-width: none; }
-  .training .note { max-width: none; }
-}
-
 /* V38 — resultados por categoria com carrossel horizontal */
 .results-head {
   display: flex;
@@ -1097,204 +1076,4 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
   .quote-card p { margin: 34px 0 24px; font-size: 28px; }
   .feedback-controls { margin-top: 14px; }
   .feedback-arrow { width: 36px; height: 36px; }
-}
-
-/* V45 — ajustes de continuidade entre seções no mobile */
-@media (max-width: 820px) {
-  /* Evita que os cantos arredondados do CTA criem duas "orelhas" rosa nas laterais. */
-  .final-cta {
-    margin-left: 0;
-    margin-right: 0;
-    border-radius: 0;
-  }
-
-  .final-cta::before {
-    top: -14px;
-    height: 14px;
-    border-radius: 0;
-    background: linear-gradient(180deg, rgba(247,241,234,0) 0%, rgba(11,85,121,.12) 55%, var(--blue-deep) 100%);
-  }
-
-  /* Reduz o "respiro" vazio entre a localização e o bloco do Instagram. */
-  .location {
-    padding-bottom: 42px;
-  }
-
-  /* Evita que o fim de Resultados e o início de Feedbacks criem um vão exagerado. */
-  .results {
-    padding-bottom: 46px;
-  }
-
-  .feedback {
-    padding-top: 58px;
-  }
-}
-
-/* V47 — maquiagem enriquecida com as três propostas reais */
-.feature-makeup {
-  gap: clamp(28px, 5vw, 70px);
-}
-.makeup-feature-visual {
-  position: relative;
-  overflow: hidden;
-  border-radius: 34px;
-  background: var(--cream-2);
-}
-.makeup-feature-visual img {
-  width: 100%;
-  aspect-ratio: 1 / 1.02;
-  object-fit: cover;
-  display: block;
-}
-.makeup-image-note {
-  position: absolute;
-  left: 16px;
-  bottom: 16px;
-  max-width: calc(100% - 32px);
-  padding: 9px 12px;
-  border: 1px solid rgba(247,241,234,.65);
-  border-radius: 999px;
-  background: rgba(33,29,27,.48);
-  backdrop-filter: blur(8px);
-  color: #fff;
-  font-size: 8px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-.makeup-feature-kicker {
-  color: var(--gold);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .11em;
-  text-transform: uppercase;
-}
-.makeup-lead {
-  max-width: 600px;
-}
-.makeup-options {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  margin-top: 28px;
-  border-top: 1px solid rgba(183,151,99,.24);
-  border-bottom: 1px solid rgba(183,151,99,.18);
-}
-.makeup-option {
-  appearance: none;
-  border: 0;
-  border-left: 1px solid rgba(183,151,99,.18);
-  background: transparent;
-  color: var(--muted);
-  text-align: left;
-  padding: 14px 14px 13px;
-  cursor: pointer;
-  transition: background .2s ease, color .2s ease;
-}
-.makeup-option:first-child { border-left: 0; }
-.makeup-option strong,
-.makeup-option span { display: block; }
-.makeup-option strong {
-  color: var(--ink);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: .04em;
-}
-.makeup-option span {
-  margin-top: 4px;
-  font-size: 9px;
-  line-height: 1.25;
-}
-.makeup-option.is-active {
-  background: rgba(183,151,99,.09);
-}
-.makeup-option.is-active strong { color: var(--blue-deep); }
-.makeup-option:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: -2px;
-}
-.makeup-meta {
-  display: grid;
-  grid-template-columns: 1.3fr .7fr;
-  gap: 18px;
-  margin-top: 24px;
-}
-.makeup-meta div {
-  padding-top: 12px;
-  border-top: 1px solid var(--line);
-}
-.makeup-meta span,
-.makeup-meta strong { display:block; }
-.makeup-meta span {
-  color: var(--gold);
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-}
-.makeup-meta strong {
-  margin-top: 6px;
-  color: var(--muted);
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 1.45;
-}
-.makeup-feature-copy .text-link { margin-top: 24px; }
-
-@media (max-width: 1024px) {
-  .makeup-feature-visual img { aspect-ratio: 1.2 / 1; }
-}
-
-@media (max-width: 560px) {
-  .makeup-feature-kicker { font-size: 9px; }
-  .makeup-options { grid-template-columns: 1fr; }
-  .makeup-option,
-  .makeup-option:first-child { border-left: 0; border-top: 1px solid rgba(183,151,99,.16); }
-  .makeup-option:first-child { border-top: 0; }
-  .makeup-option { padding: 11px 12px; text-align: left; }
-  .makeup-option strong { font-size: 10px; }
-  .makeup-option span { font-size: 8px; }
-  .makeup-meta { grid-template-columns: 1fr; gap: 12px; }
-}
-
-
-/* V49 — micropigmentação enriquecida com informações reais */
-.lips-copy > p { max-width: 590px; }
-.lips-highlights {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 26px;
-  border-top: 1px solid rgba(183,151,99,.25);
-  border-bottom: 1px solid rgba(183,151,99,.18);
-}
-.lips-highlight {
-  min-width: 0;
-  padding: 13px 14px 14px;
-  border-left: 1px solid rgba(183,151,99,.18);
-}
-.lips-highlight:first-child { border-left: 0; }
-.lips-highlight span, .lips-highlight strong { display: block; }
-.lips-highlight span {
-  color: var(--gold);
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-}
-.lips-highlight strong {
-  margin-top: 6px;
-  color: var(--ink);
-  font-size: 10px;
-  line-height: 1.25;
-  font-weight: 500;
-}
-.lips-copy .btn-dark { margin-top: 24px; }
-
-@media (max-width: 820px) {
-  .lips-highlights { grid-template-columns: repeat(3, 1fr); }
-}
-
-@media (max-width: 560px) {
-  .lips-highlights { margin-top: 22px; }
-  .lips-highlight { padding: 12px 9px 13px; }
-  .lips-highlight strong { font-size: 9px; }
 }

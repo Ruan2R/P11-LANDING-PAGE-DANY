@@ -1,3 +1,4 @@
+# P11 — Danielly Oliveira Beauty Studio
 # P11 — Landing Page Danielly Oliveira
 
 Primeira versão do site da Danielly Oliveira | Beauty Studio.
@@ -41,3 +42,8 @@ V20: refinamento sutil do bloco de áreas de atuação, mantendo a altura e a es
 
 
 V29: refinada a seção de extensão de cílios com quatro técnicas reais (Volume Brasileiro, Volume Egípcio, Foxy Eyes e Fio a Fio Clássico) e CTA com ícone do WhatsApp.
+
+V43: final CTA transition softened into blue; footer content centered; WhatsApp icon in final CTA button.
+
+
+V50: refinamento da seção de Formação para usar a nomenclatura “Formação para Lash Designer” e nota provisória mais limpa sobre os detalhes do curso.
