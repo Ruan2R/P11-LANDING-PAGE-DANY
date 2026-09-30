@@ -108,21 +108,21 @@ const makeupTime = document.querySelector('[data-makeup-time]');
 
 const makeupData = {
   express: {
-    image: 'assets/maquiagem/make_express.jpg',
+    image: 'assets/maquiagem/make_express2.webp',
     alt: 'Inspirações de maquiagem express',
     lead: 'Uma maquiagem leve e prática para acompanhar sua rotina sem perder o cuidado em cada detalhe.',
     ideal: 'Compromissos durante o dia, reuniões, fotos simples e ocasiões em que você quer praticidade.',
     time: '30 a 40 min.'
   },
   classica: {
-    image: 'assets/maquiagem/make_classica.jpg',
+    image: 'assets/maquiagem/make_classica2.jpg',
     alt: 'Inspirações de maquiagem clássica',
     lead: 'Uma produção mais completa e elegante, equilibrando definição, acabamento e naturalidade.',
     ideal: 'Fotos, jantares, aniversários, eventos, confraternizações e convidados de casamento.',
     time: '40 min. a 1h.'
   },
   glam: {
-    image: 'assets/maquiagem/make_glam.jpg',
+    image: 'assets/maquiagem/make_glam1.jpg',
     alt: 'Inspirações de maquiagem glam',
     lead: 'Uma produção mais elaborada, marcada e detalhada para quem quer um visual de impacto.',
     ideal: 'Festas, shows, formaturas, ensaios fotográficos, aniversários, baladas e eventos noturnos.',
@@ -160,21 +160,30 @@ makeupOptions.forEach((option) => {
 const lashTechniqueOptions = document.querySelectorAll('[data-lash-technique]');
 const lashProposal = document.querySelector('[data-lash-proposal]');
 const lashIdeal = document.querySelector('[data-lash-ideal]');
+const lashFeatureImage = document.querySelector('.feature-lash .feature-image img');
 
 const lashTechniqueData = {
   brasileiro: {
+    image: 'assets/cilios/volume_brasileiro.jpg',
+    imageAlt: 'Volume Brasileiro - extensão de cílios',
     proposal: 'Clássico e natural, com leve volume e possibilidade de fios pretos ou marrons.',
     ideal: 'Quem prefere um olhar marcante, mas delicado e harmonioso.'
   },
   egipcio: {
+    image: 'assets/cilios/volume_egipcio.jpg',
+    imageAlt: 'Volume Egípcio - extensão de cílios',
     proposal: 'Mais cheio, denso e glamouroso para criar um olhar de maior intensidade.',
     ideal: 'Quem gosta de volume, presença e um efeito mais impactante.'
   },
   foxy: {
+    image: 'assets/cilios/foxy_eyes3.jpg',
+    imageAlt: 'Foxy Eyes - extensão de cílios',
     proposal: 'Aplicação estratégica para alongar o olhar e direcionar o efeito para as extremidades.',
     ideal: 'Quem gosta de um olhar mais alongado, definido e marcante.'
   },
   'fio-a-fio': {
+    image: 'assets/cilios/lash-03.jpg',
+    imageAlt: 'Fio a Fio Clássico - extensão de cílios',
     proposal: 'Resultado leve e definido, sem o volume intenso das técnicas mais volumosas.',
     ideal: 'Quem prefere naturalidade, definição e um acabamento mais delicado.'
   }
@@ -194,6 +203,14 @@ lashTechniqueOptions.forEach((option) => {
 
     if (lashProposal) lashProposal.textContent = data.proposal;
     if (lashIdeal) lashIdeal.textContent = data.ideal;
+    if (lashFeatureImage && data.image) {
+      lashFeatureImage.style.opacity = '0.35';
+      window.setTimeout(() => {
+        lashFeatureImage.src = data.image;
+        lashFeatureImage.alt = data.imageAlt;
+        lashFeatureImage.style.opacity = '1';
+      }, 120);
+    }
   });
 });
 
