@@ -51,3 +51,12 @@ V50: refinamento da seção de Formação para usar a nomenclatura “Formação
 ## V60 — Conteúdo visual
 - Resultados preenchidos com todos os assets de procedimento disponíveis (sem arquivos de referência/info).
 - Foto da Formação atualizada para `assets/cilios/volume_egipcio2.jpg`.
+
+
+V63: final responsive hardening — cleaned duplicate/dead media rules, made the service strip 2x2 on narrow phones, and made result category tabs horizontally scrollable on small screens. No content architecture changes.
+
+
+## V66
+- Reduced excessive vertical whitespace between About → Services, Makeup → Micropigmentation, Training → Results, Feedbacks → Location, and Location → Instagram on narrow screens.
+- Reordered the location card so the section label and “Onde você me encontra?” appear before the map.
+- No content architecture changes.
