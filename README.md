@@ -47,3 +47,7 @@ V43: final CTA transition softened into blue; footer content centered; WhatsApp 
 
 
 V50: refinamento da seção de Formação para usar a nomenclatura “Formação para Lash Designer” e nota provisória mais limpa sobre os detalhes do curso.
+
+## V60 — Conteúdo visual
+- Resultados preenchidos com todos os assets de procedimento disponíveis (sem arquivos de referência/info).
+- Foto da Formação atualizada para `assets/cilios/volume_egipcio2.jpg`.
