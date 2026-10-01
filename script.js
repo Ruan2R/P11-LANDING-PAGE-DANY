@@ -105,6 +105,8 @@ const makeupImage = document.querySelector('[data-makeup-image]');
 const makeupLead = document.querySelector('[data-makeup-lead]');
 const makeupIdeal = document.querySelector('[data-makeup-ideal]');
 const makeupTime = document.querySelector('[data-makeup-time]');
+const makeupPrice = document.querySelector('[data-makeup-price]');
+const makeupExtra = document.querySelector('[data-makeup-extra]');
 
 const makeupData = {
   express: {
@@ -112,21 +114,27 @@ const makeupData = {
     alt: 'Inspirações de maquiagem express',
     lead: 'Uma maquiagem leve e prática para acompanhar sua rotina sem perder o cuidado em cada detalhe.',
     ideal: 'Compromissos durante o dia, reuniões, fotos simples e ocasiões em que você quer praticidade.',
-    time: '30 a 40 min.'
+    time: '30 a 40 min.',
+    price: 'R$80,00',
+    extra: 'Sem cílios postiços e sem técnicas elaboradas nos olhos.'
   },
   classica: {
     image: 'assets/maquiagem/make_classica2.jpg',
     alt: 'Inspirações de maquiagem clássica',
     lead: 'Uma produção mais completa e elegante, equilibrando definição, acabamento e naturalidade.',
     ideal: 'Fotos, jantares, aniversários, eventos, confraternizações e convidados de casamento.',
-    time: '40 min. a 1h.'
+    time: '40 min. a 1h.',
+    price: 'R$120,00',
+    extra: 'Com ou sem cílios postiços pelo mesmo valor.'
   },
   glam: {
-    image: 'assets/maquiagem/make_glam1.jpg',
+    image: 'assets/maquiagem/make_glam1.jpeg',
     alt: 'Inspirações de maquiagem glam',
     lead: 'Uma produção mais elaborada, marcada e detalhada para quem quer um visual de impacto.',
     ideal: 'Festas, shows, formaturas, ensaios fotográficos, aniversários, baladas e eventos noturnos.',
-    time: '1h a 1h10.'
+    time: '1h a 1h10.',
+    price: 'R$140,00',
+    extra: 'Com ou sem cílios postiços pelo mesmo valor.'
   }
 };
 
@@ -153,6 +161,8 @@ makeupOptions.forEach((option) => {
     if (makeupLead) makeupLead.textContent = data.lead;
     if (makeupIdeal) makeupIdeal.textContent = data.ideal;
     if (makeupTime) makeupTime.textContent = data.time;
+    if (makeupPrice) makeupPrice.textContent = data.price;
+    if (makeupExtra) makeupExtra.textContent = data.extra;
   });
 });
 
@@ -160,6 +170,8 @@ makeupOptions.forEach((option) => {
 const lashTechniqueOptions = document.querySelectorAll('[data-lash-technique]');
 const lashProposal = document.querySelector('[data-lash-proposal]');
 const lashIdeal = document.querySelector('[data-lash-ideal]');
+const lashPrice = document.querySelector('[data-lash-price]');
+const lashTime = document.querySelector('[data-lash-time]');
 const lashFeatureImage = document.querySelector('.feature-lash .feature-image img');
 
 const lashTechniqueData = {
@@ -167,25 +179,49 @@ const lashTechniqueData = {
     image: 'assets/cilios/volume_brasileiro.jpg',
     imageAlt: 'Volume Brasileiro - extensão de cílios',
     proposal: 'Clássico e natural, com leve volume e possibilidade de fios pretos ou marrons.',
-    ideal: 'Quem prefere um olhar marcante, mas delicado e harmonioso.'
+    ideal: 'Quem prefere um olhar marcante, mas delicado e harmonioso.',
+    price: 'Aplicação R$120 · manutenção R$80.',
+    time: '1h15 a 1h30 · manutenção a cada 15 a 20 dias.'
   },
   egipcio: {
     image: 'assets/cilios/volume_egipcio.jpg',
     imageAlt: 'Volume Egípcio - extensão de cílios',
-    proposal: 'Mais cheio, denso e glamouroso para criar um olhar de maior intensidade.',
-    ideal: 'Quem gosta de volume, presença e um efeito mais impactante.'
+    proposal: 'Fios mais cheios, densos e glamourosos para criar um olhar poderoso e sofisticado.',
+    ideal: 'Quem gosta de intensidade, presença e impacto no olhar.',
+    price: 'Aplicação R$140 · manutenção R$90.',
+    time: '1h15 a 1h30 · manutenção a cada 15 a 20 dias.'
   },
   foxy: {
     image: 'assets/cilios/foxy_eyes3.jpg',
     imageAlt: 'Foxy Eyes - extensão de cílios',
     proposal: 'Aplicação estratégica para alongar o olhar e direcionar o efeito para as extremidades.',
-    ideal: 'Quem gosta de um olhar mais alongado, definido e marcante.'
+    ideal: 'Quem gosta de olhos alongados, definidos e marcantes.',
+    price: 'Aplicação R$130 · manutenção R$80.',
+    time: '1h15 a 1h30 · manutenção a cada 15 a 20 dias.'
   },
   'fio-a-fio': {
     image: 'assets/cilios/lash-03.jpg',
     imageAlt: 'Fio a Fio Clássico - extensão de cílios',
-    proposal: 'Resultado leve e definido, sem o volume intenso das técnicas mais volumosas.',
-    ideal: 'Quem prefere naturalidade, definição e um acabamento mais delicado.'
+    proposal: 'Resultado leve e definido, sem o volume intenso das técnicas volumosas.',
+    ideal: 'Quem prefere naturalidade, definição e um acabamento delicado.',
+    price: 'Aplicação R$130 · manutenção R$90.',
+    time: '1h15 a 1h30 · manutenção a cada 15 a 20 dias.'
+  },
+  'mega-brasileiro': {
+    image: 'assets/cilios/volume_brasileiro6.jpg',
+    imageAlt: 'Mega Brasileiro - extensão de cílios',
+    proposal: 'Efeito volumoso e destacado, pensado para quem gosta de cílios bem cheios.',
+    ideal: 'Quem busca mais densidade e um olhar intenso, sem abrir mão do acabamento brasileiro.',
+    price: 'Aplicação R$190 · manutenção R$100.',
+    time: '1h40 a 2h · manutenção a cada 15 a 20 dias.'
+  },
+  'mega-egipcio': {
+    image: 'assets/cilios/volume_egipcio5.jpg',
+    imageAlt: 'Mega Egípcio - extensão de cílios',
+    proposal: 'Super volumoso e impactante, com bastante destaque e presença no olhar.',
+    ideal: 'Quem quer o efeito mais intenso e glamouroso entre as opções volumosas.',
+    price: 'Aplicação R$230 · manutenção R$150.',
+    time: '1h40 a 2h · manutenção a cada 15 a 20 dias.'
   }
 };
 
@@ -203,6 +239,8 @@ lashTechniqueOptions.forEach((option) => {
 
     if (lashProposal) lashProposal.textContent = data.proposal;
     if (lashIdeal) lashIdeal.textContent = data.ideal;
+    if (lashPrice) lashPrice.textContent = data.price;
+    if (lashTime) lashTime.textContent = data.time;
     if (lashFeatureImage && data.image) {
       lashFeatureImage.style.opacity = '0.35';
       window.setTimeout(() => {

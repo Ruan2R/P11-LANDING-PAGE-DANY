@@ -1,7 +1,7 @@
 # P11 — Danielly Oliveira Beauty Studio
 # P11 — Landing Page Danielly Oliveira
 
-Primeira versão do site da Danielly Oliveira | Beauty Studio.
+Primeira Versão de trabalho: V62
 
 ## Stack
 
