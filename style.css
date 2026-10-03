@@ -294,7 +294,7 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
 .floating-whatsapp { position: fixed; z-index: 60; right: 20px; bottom: 20px; width: 52px; height: 52px; display: grid; place-items: center; border-radius: 50%; background: #16a34a; color: #fff; box-shadow: 0 12px 30px rgba(0,0,0,.2); }
 .floating-whatsapp svg { width: 27px; height: 27px; fill: currentColor; display: block; }
 
-.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+.reveal { opacity: 1; transform: none; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
 @media (max-width: 1120px) {
@@ -893,6 +893,26 @@ h1 em, h2 em { color: var(--blue-deep); font-weight: 500; }
   display: grid;
   gap: 6px;
   padding: 15px 16px 18px;
+}
+
+/* V91 — Micropigmentação: transformar a descrição repetida em legenda discreta acima da imagem. */
+.results-image-note {
+  padding: 12px 16px 8px;
+  color: var(--gold);
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.results-slide:has(.results-image-note) {
+  background: var(--paper);
+}
+
+.results-slide:has(.results-image-note) img {
+  margin-top: 0;
 }
 .results-slide figcaption span {
   color: var(--gold);

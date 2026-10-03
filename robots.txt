@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ruan2r.github.io/P11-LANDING-PAGE-DANY/sitemap.xml

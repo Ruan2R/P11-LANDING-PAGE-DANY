@@ -32,6 +32,10 @@ revealItems.forEach((item) => observer.observe(item));
 const resultTabs = document.querySelectorAll('.results-tab');
 const resultPanels = document.querySelectorAll('.results-panel');
 
+resultPanels.forEach((panel) => {
+  panel.hidden = !panel.classList.contains('is-active');
+});
+
 resultTabs.forEach((tab) => {
   tab.addEventListener('click', () => {
     const key = tab.dataset.resultsTab;
@@ -68,7 +72,7 @@ function setFeedbackSlide(index, behavior = 'smooth') {
   feedbackDots.forEach((dot, i) => {
     const active = i === feedbackIndex;
     dot.classList.toggle('is-active', active);
-    dot.setAttribute('aria-selected', String(active));
+    dot.setAttribute('aria-pressed', String(active));
   });
 }
 
@@ -95,7 +99,7 @@ feedbackTrack?.addEventListener('scroll', () => {
   feedbackDots.forEach((dot, i) => {
     const active = i === feedbackIndex;
     dot.classList.toggle('is-active', active);
-    dot.setAttribute('aria-selected', String(active));
+    dot.setAttribute('aria-pressed', String(active));
   });
 });
 
